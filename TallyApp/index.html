@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" ng-app="TallyApp">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>The Single Page Blogger</title>
+
+  <!-- build:css app/built/app.min.css -->
+  <link rel="stylesheet" href="app/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="app/css/app.css">
+  <link href="app/css/font-awesome.css" rel="stylesheet" />
+  
+  <!-- endbuild -->
+</head>
+<body> 
+	<br/>          
+    
+<div ng-controller="TallyController">
+   
+    <h4> Please select Ledger Accounts to push voucher to tally :</h4>
+    <br/>
+    <br/>
+    <br/>
+    Select Ledger(cr): <select  ng-model="LedgerCr" ng-change="changeSelectedItem()" ng-options="b for b in ledgerList">
+    </select>
+   
+    Select Ledger(dr):<select ng-model="LedgerDr" ng-change="changeSelectedItem()" ng-options="b for b in ledgerList">
+    </select>
+    <br/>
+    <br/>
+    <br/>
+                <h4> Expense Object:  </h4>
+                 <br/>
+                 <br/>  
+    <table class="table table-condensed" style="width:200px;">
+        <tr ng-repeat="expenses in expense">
+            <td>{{ expenses.type }}</td>
+            <td>{{ expenses.amount }}</td>
+            <td>{{ expenses.date }}</td>
+            <td><button class="btn btn-info" ng-click="addTally()">add expense to Tally</button>
+            </td>
+        </tr>
+    </table>
+   
+    
+</div>
+</body>
+
+    <!-- build:js app/built/app.min.js -->
+
+    <script src="app/lib/jquery/jquery.min.js"></script>
+    <script src="app/lib/bootstrap/bootstrap.min.js"></script>
+
+
+    <script src="app/lib/angular/angular.js"></script>
+	<script src="app/lib/angular-ui-router/angular-ui-router.min.js"></script>
+   
+	<script src="app/js/app.js"></script>
+	<script src="app/js/controllers.js"></script>
+	<script src="app/js/directives.js"></script>
+	<script src="app/js/filters.js"></script>
+	<script src="app/js/services.js"></script>
+
+    
+   
+    
+    
+    <!-- endbuild -->
+</html>
+
