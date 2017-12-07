@@ -11,6 +11,12 @@ expense Object ={ type: "Expense" ,
                    amount: "300.50",
                    date: "01/12/2017",
                    description: "Travelling to Hydrabad" }]
+                   
+ Before that,
+ 
+ To initiate XML interaction over HTTP with Tally, the server port has to be enabled in Tally. Click on “Configurations” or F3-> “Advanced Configurations”, and then select the following options: I set the “Tally is acting as” to “Both”, and “Port” to “9002”. Save, and exit. Restart Tally.
+ 
+Open a browser, and enter http://localhost:9002 in the address bar. You should see a message “<RESPONSE>Tally.ERP 9 Server is Running</RESPONSE>”. Now you are good to go. Else, have a look at the documentation.
 
 To create a voucher in tally we need to get ledger account for credit and debit, first.
 
