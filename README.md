@@ -170,3 +170,5 @@ We can do this by using a http post method, please refer below,
                     https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
                     
             It is imperative that you do this, because the api will work, but we cannot get the response into the app.thankss!!
+            
+         Go to the app folder, open cmd from address bar, and type command : node scripts/web-server.js
